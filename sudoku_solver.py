@@ -40,10 +40,6 @@ class SudokuSolver:
                 if not found:
                     self.box_possibility[box][num] = 1
 
-        # print(self.row_possibility)
-        # print(self.col_possibility)
-        # print(self.box_possibility)
-
     def solve_sudoku(self):
         empty = self.find_best_empty()
         if not empty:
@@ -157,9 +153,10 @@ def load_sudoku_grids(filename, grid_size):
 
     return grids
 
-sudoku_size = 25
-file_name = "sudoku_grids_25.txt"
-all_grids_9 = load_sudoku_grids(file_name, sudoku_size)
+sudoku_size = 16
+sudoku_dir = "sudoku_grids/"
+file_path = f"{sudoku_dir}sudoku_grids_16.txt"
+all_grids_9 = load_sudoku_grids(file_path, sudoku_size)
 t_start_all = time.time()
 for idx, grid in enumerate(all_grids_9):
     t_start = time.time()

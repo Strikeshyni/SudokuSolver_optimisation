@@ -92,9 +92,9 @@ def save_grid_to_file(filename, grid):
 
 # Exemple d'utilisation
 if __name__ == "__main__":
-    filename = "sudoku_grids_25.txt"
-    size = 25
-    percentage = 0.4  # 50% des cases masquées
+    filename = "sudoku_grids_16.txt"
+    size = 16
+    percentage = 0.7  # 50% des cases masquées
 
     grid = generate_sudoku(size)
     print("Grille complète :")
